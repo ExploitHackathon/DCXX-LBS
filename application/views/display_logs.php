@@ -9,6 +9,7 @@
 
 <div>
 	<?php echo $cmd; ?>
+</div>
 
 <a href="/nmapweb/logs">
 <div class="refresh"> 

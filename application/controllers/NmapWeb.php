@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by JetBrains PhpStorm.
- * User: logan
+ * User: lbs
  * Date: 7/28/12
  * Time: 9:02 PM
  * To change this template use File | Settings | File Templates.
@@ -12,17 +12,44 @@ require(APPPATH.'/libraries/request.php');
 
 class NmapWeb extends CI_Controller
 {
-
+    /**
+     * @var to store the commands
+     */
     protected $commands;
+
+    /**
+     * @var the path to the log file
+     */
     protected $logs;
+
+    /**
+     * @var the target of the nmap scan
+     */
     protected $target;
+
+    /**
+     * @var the log file name duh
+     */
     protected $log_file_name;
+
+    /**
+     * @var string the file path
+     */
     protected $nmap_file_path;
-	protected $cmd;
-	public $log_contents;
-	
 
+    /**
+     * @var the actual nmap cmd that gets run
+     */
+    protected $cmd;
 
+    /**
+     * @var the contents of the log file
+     */
+    public $log_contents;
+
+    /**
+     * sets up some defaults
+     */
     function __construct()
     {
 		parent::__construct();
@@ -32,6 +59,9 @@ class NmapWeb extends CI_Controller
         
     }
 
+    /**
+     * displays the form
+     */
     function index()
     {
 		$this->load->helper('form');
@@ -76,7 +106,10 @@ class NmapWeb extends CI_Controller
 		
     }
 
-	public function run()
+    /**
+     * processes the form submission and goes to the display logs page
+     */
+    public function run()
 	{
 		$this->load->helper('url');
 		
@@ -130,14 +163,14 @@ class NmapWeb extends CI_Controller
 	}
 
 
-	public function find()
-	{
-		echo "foundit";
-	}
-
-	private function runNmap()
+    /**
+     * runs the actual nmap command
+     */
+    private function runNmap()
 	{
         $this->cmd = $this->nmap_file_path.' '. $this->getCommands().' '.$this->target.' >> '.$this->logs.' 2>&1 &';
+
+        echo $this->cmd;
         
 		exec($this->cmd);
 	}
@@ -147,11 +180,14 @@ class NmapWeb extends CI_Controller
 		exec($this->nmap_file_path.' -v -A '.$this->target.' >> '.$this->logs.' 2>&1 &');
 	}
 
+    /**
+     * displays the log file
+     */
     public function logs()
     {
 		$data = array();
 		
-		$data['cmd'] = $this->cmd;
+//		$data['cmd'] = "cmd ". $this->cmd;
 		
 		$data['log_contents'] = file_get_contents($this->getLogs());
 		
@@ -162,11 +198,19 @@ class NmapWeb extends CI_Controller
 
     }
 
+    /**
+     * @param $commands
+     */
     public function setCommands($commands)
     {
         $this->commands = $commands;
     }
 
+    /**
+     * defaults to quick scan
+     *
+     * @return mixed
+     */
     public function getCommands()
     {
 		if(empty($this->commands))
@@ -176,11 +220,17 @@ class NmapWeb extends CI_Controller
         return $this->commands;
     }
 
+    /**
+     * @param $log_file_name
+     */
     public function setLogFileName($log_file_name)
     {
         $this->log_file_name = $log_file_name;
     }
 
+    /**
+     * @return mixed
+     */
     public function getLogFileName()
     {
         if(empty($this->log_file_name))
@@ -190,21 +240,33 @@ class NmapWeb extends CI_Controller
         return $this->log_file_name;
     }
 
+    /**
+     * @param $logs
+     */
     public function setLogs($logs)
     {
         $this->logs = $logs;
     }
 
+    /**
+     * @return mixed
+     */
     public function getLogs()
     {
         return $this->logs;
     }
 
+    /**
+     * @param $target
+     */
     public function setTarget($target)
     {
         $this->target = $target;
     }
 
+    /**
+     * @return mixed
+     */
     public function getTarget()
     {
         return $this->target;
