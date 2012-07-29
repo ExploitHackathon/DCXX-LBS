@@ -18,8 +18,6 @@ The solution to this is very simple, specially on Ubuntu. The Apache’s user ww
 
 2. At the end of the file, add the following
 
-www-data ALL=NOPASSWD: /sbin/iptables, /usr/bin/du
-This is assuming that you wish to run iptables and du using super user (root) privileges. However, if you wish to run every application using super user privileges, then add the following instead of what’s above
+www-data ALL=NOPASSWD: /usr/bin/nmap
 
-www-data ALL=NOPASSWD: ALL
 
