@@ -28,18 +28,22 @@ class NmapWeb extends CI_Controller
 
     function index()
     {
+		$this->load->helper('form');
+		$html = "";
+		
+		$html .= form_open('nmapweb/run');
 	
 
-		$this->runNmap();
-		$this->readLogs();
+		// $this->runNmap();
+		// $this->readLogs();
 		
 		
     }
 
 
-	private function findNmap()
+	private function find()
 	{
-		
+		echo "foundit";
 	}
 
 	private function runNmap()
