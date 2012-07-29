@@ -86,6 +86,27 @@ class NmapWeb extends CI_Controller
 			case "udp"
 				$this->setCommands('-sS -sU -T4 -A -v');
 				break;
+            case "tcp":
+                $this->setCommands('-p 1-65535 T4 -A -v');
+                break;
+            case "noping"
+                $this->setCommands('-T4 -A -v -Pn');
+                break;
+            case "ping":
+                $this->setCommands('-sn');
+                break;
+            case "quick"
+                $this->setCommands('-T4 -F');
+                break;
+            case "quickplus":
+                $this->setCommands('-sV -T4 -O -F --version-light');
+                break;
+            case "traceroute"
+                $this->setCommands('-sn --traceroute');
+                break;
+            case "slow"
+                $this->setCommands('-sS -sU -T4 -A -v -PE -PP -PS80,443 -PA3389 -PU40125 -PY -g 53');
+                break;
 		}
         
         // $databaseName = $this->GetDatabaseName();
