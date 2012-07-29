@@ -31,7 +31,7 @@ class NmapWeb extends CI_Controller
 	
 
 		$this->runNmap();
-		// $this->readLogs();
+		$this->readLogs();
 		
 		
     }
@@ -44,15 +44,7 @@ class NmapWeb extends CI_Controller
 
 	private function runNmap()
 	{
-		ob_start();
-
-		exec($this->nmap_file_path.' -v -A '.$this->target);
-
-		$data['log_contents'] = ob_get_contents();
-		
-		ob_end_clean();
-		
-		$this->load->view('display_logs', $data);
+		exec($this->nmap_file_path.' -T4 -F '.$this->target.' >> '.$this->logs.' 2>&1 &');
 	}
 	
 	private function createLogFile()
@@ -63,13 +55,12 @@ class NmapWeb extends CI_Controller
     private function readLogs()
     {
 		$data = array();
-
-        if ($stream = fopen($this->getLogs(), 'r')) {
-            
-            $data['log_contents'] = stream_get_contents($stream, -1, 0);
-
-            fclose($stream);
-        }
+		
+		
+		$data['log_contents'] = file_get_contents($this->getLogs());
+		
+		file_put_contents($this->getLogs(), "");
+		
 
 		$this->load->view('display_logs', $data);
 
