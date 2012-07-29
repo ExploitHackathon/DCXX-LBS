@@ -56,7 +56,7 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	$system_path = 'system';
+	$system_path = '../system';
 
 /*
  *---------------------------------------------------------------
@@ -72,10 +72,9 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-//$app = realdir(__DIR__);
-//var_dump($app);
 
-	$application_folder = realdir('../application');
+
+	$application_folder = '../application';
 
 /*
  * --------------------------------------------------------------------
