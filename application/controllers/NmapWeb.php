@@ -19,6 +19,7 @@ class NmapWeb extends CI_Controller
 
     function __construct()
     {
+		parent::__construct();
         $this->setLogs( ROOTDIR.'/log/'.$this->getLogFileName() );
         $this->setTarget("localhost");
 		$this->nmap_file_path = "/usr/local/bin/nmap";
@@ -27,6 +28,9 @@ class NmapWeb extends CI_Controller
 
     function index()
     {
+		// echo "shit";
+		// $this->load->view('test');
+		
         // echo exec('whoami');
         // echo "executing nmap against localhost";
         // echo $this->logs;
