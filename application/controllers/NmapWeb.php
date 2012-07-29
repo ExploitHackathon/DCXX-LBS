@@ -40,7 +40,7 @@ class NmapWeb extends CI_Controller
 		$target = array(
 		              'name'        => 'target',
 		              'id'          => 'target',
-		              'value'       => '',
+		              'value'       => 'localhost',
 		              'maxlength'   => '100',
 		              'size'        => '20',
 		              'style'       => 'width:10%',
@@ -62,7 +62,7 @@ class NmapWeb extends CI_Controller
 			'slow' => 'Slow comprehensive scan',
 		                );
 
-		$html .= form_dropdown('Scans', $options, 'quick');
+		$html .= form_dropdown('scans', $options, 'quick');
 		
 		$html .= form_submit('submit', 'Submit!');
 		
@@ -80,13 +80,25 @@ class NmapWeb extends CI_Controller
 
 	public function run()
 	{
-		$this->post = Request::post();
+		$scans = Request::post('scans');
+		
+		switch($scans)
+		{
+			case "iscan":
+				$this->setCommands('-T4 -A -v');
+				break;
+			case "udp"
+				$this->setCommands('-sS -sU -T4 -A -v');
+				break;
+		}
         
         // $databaseName = $this->GetDatabaseName();
+
+		
         
         foreach ($this->post as $key => $var)
         {
-			echo $key ." ... " .$var;
+			echo $key ." ... " .$var. "... ";
 		}
 	}
 
