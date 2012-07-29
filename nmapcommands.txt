@@ -1,4 +1,29 @@
-nmap -p 1-65535 T4 -A -v localhost
+# Intense scan
+nmap -T4 -A -v $target
+# Intense +udp
+nmap -sS -sU -T4 -A -v $target
+# Intense all tcp
+nmap -p 1-65535 T4 -A -v $target
+# intense no ping
+nmap -T4 -A -v -Pn $target
 
-nmap -v -A scanme.nmap.org
+# Ping scan
+nmap -sn $target
+
+# Quick scan
+nmap -T4 -F $target
+
+# quick scan plus
+nmap -sV -T4 -O -F --version-light $target
+
+# Quick traceroute
+nmap -sn --traceroute $target
+
+# Normal Scan
+nmap $target
+
+# Slow comprehensive scan
+nmap -sS -sU -T4 -A -v -PE -PP -PS80,443 -PA3389 -PU40125 -PY -g 53 --script "default or (discovery and safe)" $target
+
+
 

@@ -1,1 +1,12 @@
-Here is the readme, needs to be updated
+DCXX-LBS
+========
+
+Defcon XX Team LBS
+
+NMAP-web
+
+Requirements
+============
+	nmap
+	php5.3
+
