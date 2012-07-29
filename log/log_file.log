@@ -1,49 +1,1011 @@
 
-Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-28 21:53 CDT
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:02 CDT
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:02 CDT
 NSE: Loaded 93 scripts for scanning.
 NSE: Script Pre-scanning.
-Initiating Ping Scan at 21:53
-Scanning scanme.nmap.org (74.207.244.221) [2 ports]
-Completed Ping Scan at 21:53, 0.34s elapsed (1 total hosts)
-Initiating Parallel DNS resolution of 1 host. at 21:53
-Completed Parallel DNS resolution of 1 host. at 21:53, 0.11s elapsed
-Initiating Connect Scan at 21:53
-Scanning scanme.nmap.org (74.207.244.221) [1000 ports]
-Discovered open port 53/tcp on 74.207.244.221
-Discovered open port 80/tcp on 74.207.244.221
-Discovered open port 22/tcp on 74.207.244.221
-Discovered open port 9929/tcp on 74.207.244.221
-Increasing send delay for 74.207.244.221 from 0 to 5 due to max_successful_tryno increase to 4
-Completed Connect Scan at 21:54, 52.20s elapsed (1000 total ports)
-Initiating Service scan at 21:54
-Scanning 4 services on scanme.nmap.org (74.207.244.221)
-Completed Service scan at 21:54, 6.22s elapsed (4 services on 1 host)
-NSE: Script scanning 74.207.244.221.
-Initiating NSE at 21:54
-Completed NSE at 21:54, 4.48s elapsed
-Nmap scan report for scanme.nmap.org (74.207.244.221)
-Host is up (0.17s latency).
-Not shown: 993 closed ports
-PORT     STATE    SERVICE    VERSION
-22/tcp   open     ssh        OpenSSH 5.3p1 Debian 3ubuntu7 (protocol 2.0)
-| ssh-hostkey: 1024 8d:60:f1:7c:ca:b7:3d:0a:d6:67:54:9d:69:d9:b9:dd (DSA)
-|_2048 79:f8:09:ac:d4:e2:32:42:10:49:d3:bd:20:82:85:ec (RSA)
-53/tcp   open     domain     ISC BIND Up oh.
-| dns-nsid: 
-|_  bind.version: Up oh.
-80/tcp   open     http       Apache httpd 2.2.14 ((Ubuntu))
-|_http-methods: GET HEAD POST OPTIONS
-|_http-title: Go ahead and ScanMe!
-|_http-favicon: Unknown favicon MD5: 156515DA3C0F7DC6B2493BD5CE43F795
-1433/tcp filtered ms-sql-s
-1434/tcp filtered ms-sql-m
-8181/tcp filtered unknown
-9929/tcp open     nping-echo Nping echo
-Service Info: OS: Linux; CPE: cpe:/o:linux:kernel
+Initiating Ping Scan at 04:02
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:02
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:02, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:02
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:02, 1.21s elapsed (1 total hosts)
+Initiating Connect Scan at 04:02
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Completed Connect Scan at 04:02, 3.48s elapsed (1000 total ports)
+Initiating Service scan at 04:02
+Scanning 2 services on localhost (127.0.0.1)
+Completed Service scan at 04:02, 11.03s elapsed (2 services on 1 host)
+NSE: Script scanning 127.0.0.1.
+Initiating NSE at 04:02
+Completed NSE at 04:02, 0.38s elapsed
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0030s latency).
+Not shown: 781 filtered ports, 217 closed ports
+PORT    STATE SERVICE VERSION
+80/tcp  open  http    Apache httpd 2.2.21 ((Unix) DAV/2 PHP/5.3.10 with Suhosin-Patch)
+|_http-title: Site doesn't have a title (text/html).
+|_http-methods: No Allow or Public header in OPTIONS response (status code 200)
+631/tcp open  ipp     CUPS 1.5
+| http-robots.txt: 1 disallowed entry 
+|_/
+| http-methods: GET HEAD OPTIONS POST PUT
+| Potentially risky methods: PUT
+|_See http://nmap.org/nsedoc/scripts/http-methods.html
 
 NSE: Script Post-scanning.
-Initiating NSE at 21:54
-Completed NSE at 21:54, 0.00s elapsed
 Read data files from: /usr/local/bin/../share/nmap
 Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 64.31 seconds
+Nmap done: 1 IP address (1 host up) scanned in 17.16 seconds
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:02 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:02
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:02, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:02
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 11 out of 15 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 27.02% done; ETC: 04:03 (0:01:24 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:02 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:02
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:02, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:02
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:02 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:02
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:02, 1.10s elapsed (1 total hosts)
+Initiating Connect Scan at 04:02
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 11 out of 12 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to 11 out of 35 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 9
+Connect Scan Timing: About 15.88% done; ETC: 04:05 (0:02:44 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:03 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:03
+Connect Scan Timing: About 27.77% done; ETC: 04:05 (0:02:39 remaining)
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:03, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:03
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 11 out of 14 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Connect Scan Timing: About 15.17% done; ETC: 04:06 (0:02:53 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 56 out of 186 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Connect Scan Timing: About 45.04% done; ETC: 04:04 (0:00:38 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to max_successful_tryno increase to 10
+Connect Scan Timing: About 16.85% done; ETC: 04:08 (0:05:01 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:03 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:03
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:03, 1.10s elapsed (1 total hosts)
+Initiating Connect Scan at 04:03
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Connect Scan Timing: About 28.70% done; ETC: 04:07 (0:03:46 remaining)
+Discovered open port 631/tcp on 127.0.0.1
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 11 out of 15 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 18.09% done; ETC: 04:05 (0:02:20 remaining)
+Completed Connect Scan at 04:03, 6.03s elapsed (1000 total ports)
+Initiating Service scan at 04:03
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 16.70% done; ETC: 04:08 (0:05:04 remaining)
+Scanning 2 services on localhost (127.0.0.1)
+Completed Service scan at 04:03, 6.17s elapsed (2 services on 1 host)
+NSE: Script scanning 127.0.0.1.
+Initiating NSE at 04:03
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:03 CDT
+Completed NSE at 04:03, 0.27s elapsed
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00065s latency).
+Not shown: 692 closed ports, 306 filtered ports
+PORT    STATE SERVICE VERSION
+80/tcp  open  http    Apache httpd 2.2.21 ((Unix) DAV/2 PHP/5.3.10 with Suhosin-Patch)
+|_http-methods: No Allow or Public header in OPTIONS response (status code 200)
+|_http-title: Site doesn't have a title (text/html).
+631/tcp open  ipp     CUPS 1.5
+| http-methods: GET HEAD OPTIONS POST PUT
+| Potentially risky methods: PUT
+|_See http://nmap.org/nsedoc/scripts/http-methods.html
+| http-robots.txt: 1 disallowed entry 
+|_/
+
+NSE: Script Post-scanning.
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 14.30 seconds
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:03
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:03, 1.10s elapsed (1 total hosts)
+Initiating Connect Scan at 04:03
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 45.90% done; ETC: 04:05 (0:01:12 remaining)
+Connect Scan Timing: About 18.56% done; ETC: 04:10 (0:06:39 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 24 dropped probes since last increase.
+Connect Scan Timing: About 30.08% done; ETC: 04:08 (0:04:41 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:04 CDT
+Connect Scan Timing: About 18.75% done; ETC: 04:08 (0:04:24 remaining)
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:04
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:04, 0.00s elapsed (1 total hosts)
+Initiating Connect Scan at 04:04
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Completed Connect Scan at 04:04, 3.90s elapsed (1000 total ports)
+Initiating Service scan at 04:04
+Connect Scan Timing: About 17.35% done; ETC: 04:11 (0:07:13 remaining)
+Scanning 2 services on localhost (127.0.0.1)
+Completed Service scan at 04:04, 6.10s elapsed (2 services on 1 host)
+NSE: Script scanning 127.0.0.1.
+Initiating NSE at 04:04
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:04 CDT
+Completed NSE at 04:04, 0.36s elapsed
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0023s latency).
+Not shown: 555 filtered ports, 443 closed ports
+PORT    STATE SERVICE VERSION
+80/tcp  open  http    Apache httpd 2.2.21 ((Unix) DAV/2 PHP/5.3.10 with Suhosin-Patch)
+|_http-methods: No Allow or Public header in OPTIONS response (status code 200)
+|_http-title: Site doesn't have a title (text/html).
+631/tcp open  ipp     CUPS 1.5
+| http-robots.txt: 1 disallowed entry 
+|_/
+| http-methods: GET HEAD OPTIONS POST PUT
+| Potentially risky methods: PUT
+|_See http://nmap.org/nsedoc/scripts/http-methods.html
+
+NSE: Script Post-scanning.
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.24 seconds
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:04
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:04, 1.10s elapsed (1 total hosts)
+Initiating Connect Scan at 04:04
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Connect Scan Timing: About 46.65% done; ETC: 04:06 (0:01:44 remaining)
+Connect Scan Timing: About 19.99% done; ETC: 04:12 (0:08:04 remaining)
+Connect Scan Timing: About 31.34% done; ETC: 04:10 (0:05:31 remaining)
+Connect Scan Timing: About 19.87% done; ETC: 04:10 (0:06:07 remaining)
+Connect Scan Timing: About 18.19% done; ETC: 04:13 (0:09:04 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:04 CDT
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:04 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:04
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:04
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 61 out of 203 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 38.48% done; ETC: 04:05 (0:00:50 remaining)
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:04, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:04
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:04, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:04
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 25 dropped probes since last increase.
+Connect Scan Timing: About 47.65% done; ETC: 04:07 (0:02:13 remaining)
+Completed Connect Scan at 04:04, 3.20s elapsed (1000 total ports)
+Initiating Service scan at 04:04
+Connect Scan Timing: About 21.60% done; ETC: 04:14 (0:09:08 remaining)
+Scanning 2 services on localhost (127.0.0.1)
+Completed Service scan at 04:05, 6.10s elapsed (2 services on 1 host)
+NSE: Script scanning 127.0.0.1.
+Initiating NSE at 04:05
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:05 CDT
+Completed NSE at 04:05, 0.32s elapsed
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0037s latency).
+Not shown: 769 filtered ports, 229 closed ports
+PORT    STATE SERVICE VERSION
+80/tcp  open  http    Apache httpd 2.2.21 ((Unix) DAV/2 PHP/5.3.10 with Suhosin-Patch)
+|_http-title: Site doesn't have a title (text/html).
+|_http-methods: No Allow or Public header in OPTIONS response (status code 500)
+631/tcp open  ipp     CUPS 1.5
+| http-methods: GET HEAD OPTIONS POST PUT
+| Potentially risky methods: PUT
+|_See http://nmap.org/nsedoc/scripts/http-methods.html
+| http-robots.txt: 1 disallowed entry 
+|_/
+
+NSE: Script Post-scanning.
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.80 seconds
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:05
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:05, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:05
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Connect Scan Timing: About 33.04% done; ETC: 04:11 (0:06:07 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 26 dropped probes since last increase.
+Connect Scan Timing: About 21.35% done; ETC: 04:12 (0:07:26 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 28 dropped probes since last increase.
+Connect Scan Timing: About 19.79% done; ETC: 04:15 (0:10:12 remaining)
+Connect Scan Timing: About 39.24% done; ETC: 04:06 (0:01:34 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 11 out of 15 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 25.77% done; ETC: 04:06 (0:01:29 remaining)
+Connect Scan Timing: About 49.17% done; ETC: 04:07 (0:02:36 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:05 CDT
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:05 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Loaded 93 scripts for scanning.
+Initiating Ping Scan at 04:05
+NSE: Script Pre-scanning.
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:05, 0.00s elapsed (1 total hosts)
+Initiating Connect Scan at 04:05
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Initiating Ping Scan at 04:05
+Connect Scan Timing: About 23.22% done; ETC: 04:15 (0:09:59 remaining)
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:05, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:05
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 11 out of 26 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 14.54% done; ETC: 04:08 (0:03:02 remaining)
+Connect Scan Timing: About 34.29% done; ETC: 04:12 (0:06:44 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:05 CDT
+Connect Scan Timing: About 22.32% done; ETC: 04:14 (0:08:46 remaining)
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:05
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:05, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:05
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Connect Scan Timing: About 21.04% done; ETC: 04:17 (0:11:19 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 22 dropped probes since last increase.
+Connect Scan Timing: About 40.41% done; ETC: 04:08 (0:02:14 remaining)
+Connect Scan Timing: About 26.88% done; ETC: 04:08 (0:02:46 remaining)
+Connect Scan Timing: About 50.70% done; ETC: 04:08 (0:02:56 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:05 CDT
+Increasing send delay for 127.0.0.1 from 0 to 5 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 40 to 80 due to 13 out of 42 dropped probes since last increase.
+Connect Scan Timing: About 45.31% done; ETC: 04:06 (0:00:37 remaining)
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:05
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:05, 0.00s elapsed (1 total hosts)
+Initiating Connect Scan at 04:05
+Connect Scan Timing: About 24.74% done; ETC: 04:16 (0:10:42 remaining)
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 11 out of 12 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 19.94% done; ETC: 04:08 (0:02:04 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 17 dropped probes since last increase.
+Connect Scan Timing: About 15.91% done; ETC: 04:11 (0:05:22 remaining)
+Connect Scan Timing: About 23.65% done; ETC: 04:15 (0:09:44 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 11 out of 19 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Connect Scan Timing: About 20.59% done; ETC: 04:08 (0:02:00 remaining)
+Connect Scan Timing: About 36.14% done; ETC: 04:13 (0:07:17 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:06 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:06
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:06, 1.10s elapsed (1 total hosts)
+Initiating Connect Scan at 04:06
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Completed Connect Scan at 04:06, 2.87s elapsed (1000 total ports)
+Connect Scan Timing: About 22.97% done; ETC: 04:18 (0:12:08 remaining)
+Initiating Service scan at 04:06
+Connect Scan Timing: About 41.93% done; ETC: 04:09 (0:02:48 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 25 dropped probes since last increase.
+Connect Scan Timing: About 28.31% done; ETC: 04:10 (0:03:50 remaining)
+Scanning 2 services on localhost (127.0.0.1)
+Completed Service scan at 04:06, 6.10s elapsed (2 services on 1 host)
+NSE: Script scanning 127.0.0.1.
+Initiating NSE at 04:06
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:06 CDT
+Completed NSE at 04:06, 0.30s elapsed
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0027s latency).
+Not shown: 686 filtered ports, 312 closed ports
+PORT    STATE SERVICE VERSION
+80/tcp  open  http    Apache httpd 2.2.21 ((Unix) DAV/2 PHP/5.3.10 with Suhosin-Patch)
+|_http-methods: No Allow or Public header in OPTIONS response (status code 500)
+|_http-title: Site doesn't have a title (text/html).
+631/tcp open  ipp     CUPS 1.5
+| http-methods: GET HEAD OPTIONS POST PUT
+| Potentially risky methods: PUT
+|_See http://nmap.org/nsedoc/scripts/http-methods.html
+| http-robots.txt: 1 disallowed entry 
+|_/
+
+NSE: Script Post-scanning.
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 12.15 seconds
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:06
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:06, 1.10s elapsed (1 total hosts)
+Initiating Connect Scan at 04:06
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Increasing send delay for 127.0.0.1 from 80 to 160 due to 13 out of 43 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 46.36% done; ETC: 04:07 (0:01:11 remaining)
+Connect Scan Timing: About 52.64% done; ETC: 04:09 (0:03:15 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 48 out of 158 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to 11 out of 14 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 9
+Connect Scan Timing: About 28.64% done; ETC: 04:07 (0:01:17 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 15 dropped probes since last increase.
+Connect Scan Timing: About 21.21% done; ETC: 04:10 (0:03:47 remaining)
+Connect Scan Timing: About 17.35% done; ETC: 04:13 (0:07:14 remaining)
+Connect Scan Timing: About 26.50% done; ETC: 04:18 (0:11:25 remaining)
+Connect Scan Timing: About 24.26% done; ETC: 04:17 (0:10:59 remaining)
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 21.88% done; ETC: 04:10 (0:03:38 remaining)
+Connect Scan Timing: About 43.73% done; ETC: 04:10 (0:03:14 remaining)
+Connect Scan Timing: About 30.11% done; ETC: 04:11 (0:04:41 remaining)
+Connect Scan Timing: About 24.34% done; ETC: 04:19 (0:12:57 remaining)
+Connect Scan Timing: About 38.24% done; ETC: 04:14 (0:07:52 remaining)
+Connect Scan Timing: About 47.79% done; ETC: 04:08 (0:01:39 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 12 dropped probes since last increase.
+Connect Scan Timing: About 29.41% done; ETC: 04:09 (0:02:26 remaining)
+Connect Scan Timing: About 22.65% done; ETC: 04:12 (0:05:11 remaining)
+Connect Scan Timing: About 18.95% done; ETC: 04:15 (0:08:37 remaining)
+Connect Scan Timing: About 24.51% done; ETC: 04:19 (0:12:22 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:07 CDT
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:07 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:07
+Initiating Ping Scan at 04:07
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:07, 1.10s elapsed (1 total hosts)
+Initiating Connect Scan at 04:07
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:07, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:07
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 19 dropped probes since last increase.
+Connect Scan Timing: About 23.43% done; ETC: 04:12 (0:04:57 remaining)
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Completed Connect Scan at 04:07, 3.47s elapsed (1000 total ports)
+Initiating Service scan at 04:07
+Connect Scan Timing: About 54.83% done; ETC: 04:10 (0:03:37 remaining)
+Connect Scan Timing: About 28.29% done; ETC: 04:19 (0:12:13 remaining)
+Scanning 2 services on localhost (127.0.0.1)
+Completed Service scan at 04:07, 6.12s elapsed (2 services on 1 host)
+NSE: Script scanning 127.0.0.1.
+Initiating NSE at 04:07
+Connect Scan Timing: About 45.25% done; ETC: 04:10 (0:03:39 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:07 CDT
+Completed NSE at 04:07, 0.49s elapsed
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0024s latency).
+Not shown: 773 filtered ports, 225 closed ports
+PORT    STATE SERVICE VERSION
+80/tcp  open  http    Apache httpd 2.2.21 ((Unix) DAV/2 PHP/5.3.10 with Suhosin-Patch)
+|_http-title: Site doesn't have a title (text/html).
+|_http-methods: No Allow or Public header in OPTIONS response (status code 500)
+631/tcp open  ipp     CUPS 1.5
+| http-robots.txt: 1 disallowed entry 
+|_/
+| http-methods: GET HEAD OPTIONS POST PUT
+| Potentially risky methods: PUT
+|_See http://nmap.org/nsedoc/scripts/http-methods.html
+
+NSE: Script Post-scanning.
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 12.60 seconds
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:07
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:07, 0.00s elapsed (1 total hosts)
+Initiating Connect Scan at 04:07
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Connect Scan Timing: About 31.45% done; ETC: 04:12 (0:05:29 remaining)
+Connect Scan Timing: About 48.95% done; ETC: 04:09 (0:02:06 remaining)
+Connect Scan Timing: About 29.66% done; ETC: 04:11 (0:03:36 remaining)
+Connect Scan Timing: About 23.70% done; ETC: 04:14 (0:06:30 remaining)
+Connect Scan Timing: About 20.02% done; ETC: 04:17 (0:10:03 remaining)
+Connect Scan Timing: About 26.25% done; ETC: 04:21 (0:13:49 remaining)
+Connect Scan Timing: About 24.75% done; ETC: 04:21 (0:13:44 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:07 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:07
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:07, 0.00s elapsed (1 total hosts)
+Initiating Connect Scan at 04:07
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Connect Scan Timing: About 24.12% done; ETC: 04:14 (0:06:21 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 10
+Connect Scan Timing: About 38.73% done; ETC: 04:08 (0:00:49 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:07 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:07
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:07, 0.00s elapsed (1 total hosts)
+Initiating Connect Scan at 04:07
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Connect Scan Timing: About 40.32% done; ETC: 04:16 (0:08:32 remaining)
+Connect Scan Timing: About 46.05% done; ETC: 04:11 (0:04:07 remaining)
+Connect Scan Timing: About 32.43% done; ETC: 04:14 (0:06:17 remaining)
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 29.23% done; ETC: 04:21 (0:13:07 remaining)
+Connect Scan Timing: About 55.42% done; ETC: 04:11 (0:04:03 remaining)
+Connect Scan Timing: About 50.20% done; ETC: 04:10 (0:02:30 remaining)
+Connect Scan Timing: About 29.91% done; ETC: 04:12 (0:04:44 remaining)
+Connect Scan Timing: About 24.58% done; ETC: 04:15 (0:07:43 remaining)
+Connect Scan Timing: About 20.54% done; ETC: 04:19 (0:11:40 remaining)
+Connect Scan Timing: About 25.00% done; ETC: 04:23 (0:15:03 remaining)
+Connect Scan Timing: About 24.64% done; ETC: 04:15 (0:07:42 remaining)
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Increasing send delay for 127.0.0.1 from 320 to 640 due to 11 out of 18 dropped probes since last increase.
+Connect Scan Timing: About 40.77% done; ETC: 04:09 (0:01:29 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 72 out of 239 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 22 dropped probes since last increase.
+Connect Scan Timing: About 79.02% done; ETC: 04:08 (0:00:30 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 60 out of 198 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 59.20% done; ETC: 04:08 (0:00:30 remaining)
+Connect Scan Timing: About 33.95% done; ETC: 04:15 (0:06:51 remaining)
+Connect Scan Timing: About 48.00% done; ETC: 04:13 (0:04:31 remaining)
+Connect Scan Timing: About 52.09% done; ETC: 04:11 (0:02:46 remaining)
+Connect Scan Timing: About 30.15% done; ETC: 04:14 (0:05:50 remaining)
+Connect Scan Timing: About 26.20% done; ETC: 04:17 (0:08:30 remaining)
+Connect Scan Timing: About 21.05% done; ETC: 04:21 (0:13:11 remaining)
+Connect Scan Timing: About 55.75% done; ETC: 04:13 (0:04:31 remaining)
+Connect Scan Timing: About 28.56% done; ETC: 04:23 (0:14:48 remaining)
+Connect Scan Timing: About 25.25% done; ETC: 04:24 (0:16:20 remaining)
+Connect Scan Timing: About 25.44% done; ETC: 04:17 (0:08:51 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 16 dropped probes since last increase.
+Connect Scan Timing: About 42.36% done; ETC: 04:10 (0:02:04 remaining)
+Connect Scan Timing: About 31.06% done; ETC: 04:22 (0:14:08 remaining)
+Connect Scan Timing: About 80.54% done; ETC: 04:09 (0:00:35 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 16 dropped probes since last increase.
+Connect Scan Timing: About 60.39% done; ETC: 04:09 (0:00:49 remaining)
+Connect Scan Timing: About 35.79% done; ETC: 04:16 (0:07:23 remaining)
+Connect Scan Timing: About 53.43% done; ETC: 04:12 (0:03:04 remaining)
+Connect Scan Timing: About 30.41% done; ETC: 04:15 (0:06:54 remaining)
+Connect Scan Timing: About 26.90% done; ETC: 04:18 (0:09:33 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:09 CDT
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:09 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:09
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:09, 0.00s elapsed (1 total hosts)
+Initiating Connect Scan at 04:09
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:09
+Connect Scan Timing: About 21.67% done; ETC: 04:23 (0:14:31 remaining)
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:09, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:09
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Connect Scan Timing: About 25.50% done; ETC: 04:26 (0:17:35 remaining)
+Connect Scan Timing: About 25.77% done; ETC: 04:19 (0:10:08 remaining)
+Connect Scan Timing: About 49.53% done; ETC: 04:14 (0:04:58 remaining)
+Connect Scan Timing: About 43.79% done; ETC: 04:11 (0:02:35 remaining)
+Connect Scan Timing: About 56.12% done; ETC: 04:14 (0:05:02 remaining)
+Connect Scan Timing: About 29.45% done; ETC: 04:25 (0:15:51 remaining)
+Connect Scan Timing: About 62.22% done; ETC: 04:10 (0:01:05 remaining)
+Connect Scan Timing: About 82.47% done; ETC: 04:10 (0:00:38 remaining)
+Connect Scan Timing: About 44.49% done; ETC: 04:18 (0:09:15 remaining)
+Connect Scan Timing: About 30.65% done; ETC: 04:17 (0:07:57 remaining)
+Connect Scan Timing: About 27.24% done; ETC: 04:20 (0:10:44 remaining)
+Connect Scan Timing: About 31.68% done; ETC: 04:24 (0:15:14 remaining)
+Connect Scan Timing: About 21.92% done; ETC: 04:25 (0:16:05 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 32 out of 105 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 37.49% done; ETC: 04:10 (0:00:52 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 11 out of 12 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Connect Scan Timing: About 48.02% done; ETC: 04:10 (0:00:34 remaining)
+Connect Scan Timing: About 25.75% done; ETC: 04:28 (0:18:48 remaining)
+Connect Scan Timing: About 37.30% done; ETC: 04:17 (0:08:01 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:09 CDT
+Connect Scan Timing: About 26.02% done; ETC: 04:21 (0:11:25 remaining)
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:09
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:09, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:09
+Connect Scan Timing: About 45.23% done; ETC: 04:12 (0:03:03 remaining)
+Connect Scan Timing: About 55.23% done; ETC: 04:13 (0:03:25 remaining)
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Connect Scan Timing: About 50.01% done; ETC: 04:15 (0:05:28 remaining)
+Connect Scan Timing: About 29.75% done; ETC: 04:26 (0:17:02 remaining)
+Connect Scan Timing: About 63.49% done; ETC: 04:11 (0:01:21 remaining)
+Connect Scan Timing: About 30.90% done; ETC: 04:18 (0:08:59 remaining)
+Connect Scan Timing: About 27.49% done; ETC: 04:21 (0:11:55 remaining)
+Connect Scan Timing: About 22.16% done; ETC: 04:27 (0:17:37 remaining)
+Connect Scan Timing: About 38.60% done; ETC: 04:11 (0:01:37 remaining)
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 49.40% done; ETC: 04:11 (0:01:02 remaining)
+Connect Scan Timing: About 83.25% done; ETC: 04:10 (0:00:44 remaining)
+Connect Scan Timing: About 37.54% done; ETC: 04:18 (0:08:46 remaining)
+Connect Scan Timing: About 26.02% done; ETC: 04:30 (0:20:06 remaining)
+Connect Scan Timing: About 26.26% done; ETC: 04:22 (0:12:41 remaining)
+Connect Scan Timing: About 32.00% done; ETC: 04:26 (0:16:24 remaining)
+Connect Scan Timing: About 45.75% done; ETC: 04:13 (0:03:35 remaining)
+Connect Scan Timing: About 56.56% done; ETC: 04:15 (0:05:38 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 23 out of 75 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 21.85% done; ETC: 04:12 (0:01:51 remaining)
+Connect Scan Timing: About 55.59% done; ETC: 04:14 (0:03:48 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:10 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:10
+Connect Scan Timing: About 45.01% done; ETC: 04:20 (0:10:06 remaining)
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:10, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:10
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Connect Scan Timing: About 50.33% done; ETC: 04:16 (0:06:02 remaining)
+Connect Scan Timing: About 31.15% done; ETC: 04:20 (0:09:59 remaining)
+Connect Scan Timing: About 27.74% done; ETC: 04:23 (0:13:04 remaining)
+Connect Scan Timing: About 64.04% done; ETC: 04:12 (0:01:37 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:10 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:10
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:10, 0.00s elapsed (1 total hosts)
+Initiating Connect Scan at 04:10
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Connect Scan Timing: About 22.41% done; ETC: 04:29 (0:19:06 remaining)
+Connect Scan Timing: About 30.08% done; ETC: 04:28 (0:18:17 remaining)
+Discovered open port 631/tcp on 127.0.0.1
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 17 dropped probes since last increase.
+Connect Scan Timing: About 39.14% done; ETC: 04:12 (0:02:22 remaining)
+Connect Scan Timing: About 50.43% done; ETC: 04:12 (0:01:29 remaining)
+Completed Connect Scan at 04:10, 3.19s elapsed (1000 total ports)
+Initiating Service scan at 04:10
+Connect Scan Timing: About 37.78% done; ETC: 04:20 (0:09:30 remaining)
+Connect Scan Timing: About 26.52% done; ETC: 04:24 (0:13:54 remaining)
+Connect Scan Timing: About 46.17% done; ETC: 04:14 (0:04:06 remaining)
+Connect Scan Timing: About 22.51% done; ETC: 04:14 (0:03:30 remaining)
+Scanning 2 services on localhost (127.0.0.1)
+Completed Service scan at 04:10, 6.14s elapsed (2 services on 1 host)
+NSE: Script scanning 127.0.0.1.
+Initiating NSE at 04:10
+Completed NSE at 04:10, 0.46s elapsed
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0046s latency).
+Not shown: 500 filtered ports, 498 closed ports
+PORT    STATE SERVICE VERSION
+80/tcp  open  http    Apache httpd 2.2.21 ((Unix) DAV/2 PHP/5.3.10 with Suhosin-Patch)
+|_http-methods: No Allow or Public header in OPTIONS response (status code 500)
+|_http-title: Site doesn't have a title (text/html).
+631/tcp open  ipp     CUPS 1.5
+| http-methods: GET HEAD OPTIONS POST PUT
+| Potentially risky methods: PUT
+|_See http://nmap.org/nsedoc/scripts/http-methods.html
+| http-robots.txt: 1 disallowed entry 
+|_/
+
+NSE: Script Post-scanning.
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 10.71 seconds
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:10 CDT
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:10 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:10
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:10
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:10, 1.21s elapsed (1 total hosts)
+Initiating Connect Scan at 04:10
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:10, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:10
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Connect Scan Timing: About 26.32% done; ETC: 04:32 (0:21:28 remaining)
+Discovered open port 631/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Completed Connect Scan at 04:10, 6.11s elapsed (1000 total ports)
+Initiating Service scan at 04:10
+Connect Scan Timing: About 83.80% done; ETC: 04:11 (0:00:51 remaining)
+Connect Scan Timing: About 55.89% done; ETC: 04:15 (0:04:14 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 11 out of 17 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Connect Scan Timing: About 19.05% done; ETC: 04:13 (0:02:12 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 160 to 320 due to 11 out of 24 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 320 to 640 due to 11 out of 18 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 15 dropped probes since last increase.
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 86.59% done; ETC: 04:11 (0:00:30 remaining)
+Connect Scan Timing: About 32.37% done; ETC: 04:28 (0:17:41 remaining)
+Scanning 2 services on localhost (127.0.0.1)
+Completed Service scan at 04:10, 6.20s elapsed (2 services on 1 host)
+NSE: Script scanning 127.0.0.1.
+Initiating NSE at 04:10
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:10 CDT
+Completed NSE at 04:10, 0.33s elapsed
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00069s latency).
+Not shown: 701 closed ports, 297 filtered ports
+PORT    STATE SERVICE VERSION
+80/tcp  open  http    Apache httpd 2.2.21 ((Unix) DAV/2 PHP/5.3.10 with Suhosin-Patch)
+|_http-title: Site doesn't have a title (text/html).
+|_http-methods: No Allow or Public header in OPTIONS response (status code 500)
+|_http-favicon: Unknown favicon MD5: A5F9084078981B64737B57DBF1735FCF
+631/tcp open  ipp     CUPS 1.5
+| http-methods: GET HEAD OPTIONS POST PUT
+| Potentially risky methods: PUT
+|_See http://nmap.org/nsedoc/scripts/http-methods.html
+| http-robots.txt: 1 disallowed entry 
+|_/
+
+NSE: Script Post-scanning.
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 15.25 seconds
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:10
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:10, 1.10s elapsed (1 total hosts)
+Initiating Connect Scan at 04:10
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 631/tcp on 127.0.0.1
+Connect Scan Timing: About 31.40% done; ETC: 04:21 (0:10:58 remaining)
+Connect Scan Timing: About 27.98% done; ETC: 04:25 (0:14:12 remaining)
+Connect Scan Timing: About 64.37% done; ETC: 04:12 (0:01:52 remaining)
+Connect Scan Timing: About 22.66% done; ETC: 04:31 (0:20:32 remaining)
+Connect Scan Timing: About 39.47% done; ETC: 04:14 (0:03:06 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 19 dropped probes since last increase.
+Connect Scan Timing: About 51.69% done; ETC: 04:12 (0:01:53 remaining)
+Connect Scan Timing: About 38.05% done; ETC: 04:21 (0:10:17 remaining)
+Connect Scan Timing: About 26.76% done; ETC: 04:26 (0:15:06 remaining)
+Connect Scan Timing: About 50.70% done; ETC: 04:17 (0:06:41 remaining)
+Connect Scan Timing: About 46.52% done; ETC: 04:15 (0:04:37 remaining)
+Connect Scan Timing: About 23.54% done; ETC: 04:16 (0:04:56 remaining)
+Connect Scan Timing: About 57.08% done; ETC: 04:17 (0:06:18 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 11 out of 15 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 29.97% done; ETC: 04:12 (0:01:12 remaining)
+Connect Scan Timing: About 45.47% done; ETC: 04:22 (0:11:03 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:11 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:11
+Connect Scan Timing: About 30.45% done; ETC: 04:31 (0:19:41 remaining)
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:11, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:11
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 19.92% done; ETC: 04:15 (0:04:05 remaining)
+Discovered open port 631/tcp on 127.0.0.1
+Connect Scan Timing: About 86.84% done; ETC: 04:11 (0:00:34 remaining)
+Connect Scan Timing: About 26.66% done; ETC: 04:34 (0:23:01 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 13 out of 42 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to 16 out of 53 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to max_successful_tryno increase to 10
+Connect Scan Timing: About 20.02% done; ETC: 04:13 (0:02:04 remaining)
+Connect Scan Timing: About 31.65% done; ETC: 04:23 (0:11:55 remaining)
+Connect Scan Timing: About 28.23% done; ETC: 04:26 (0:15:18 remaining)
+Connect Scan Timing: About 56.23% done; ETC: 04:16 (0:04:43 remaining)
+Connect Scan Timing: About 22.91% done; ETC: 04:33 (0:21:56 remaining)
+Connect Scan Timing: About 64.74% done; ETC: 04:13 (0:02:09 remaining)
+Connect Scan Timing: About 39.81% done; ETC: 04:15 (0:03:48 remaining)
+Connect Scan Timing: About 53.12% done; ETC: 04:13 (0:02:13 remaining)
+Connect Scan Timing: About 27.01% done; ETC: 04:27 (0:16:16 remaining)
+Connect Scan Timing: About 46.85% done; ETC: 04:16 (0:05:07 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 27 dropped probes since last increase.
+Connect Scan Timing: About 24.92% done; ETC: 04:17 (0:06:05 remaining)
+Connect Scan Timing: About 84.25% done; ETC: 04:12 (0:00:59 remaining)
+Connect Scan Timing: About 32.77% done; ETC: 04:30 (0:19:01 remaining)
+Connect Scan Timing: About 31.08% done; ETC: 04:14 (0:02:15 remaining)
+Connect Scan Timing: About 38.35% done; ETC: 04:22 (0:11:07 remaining)
+Increasing send delay for 127.0.0.1 from 0 to 5 due to 30 out of 98 dropped probes since last increase.
+Increasing send delay for 127.0.0.1 from 5 to 10 due to max_successful_tryno increase to 4
+Increasing send delay for 127.0.0.1 from 10 to 20 due to max_successful_tryno increase to 5
+Increasing send delay for 127.0.0.1 from 20 to 40 due to max_successful_tryno increase to 6
+Increasing send delay for 127.0.0.1 from 40 to 80 due to max_successful_tryno increase to 7
+Increasing send delay for 127.0.0.1 from 80 to 160 due to max_successful_tryno increase to 8
+Increasing send delay for 127.0.0.1 from 160 to 320 due to max_successful_tryno increase to 9
+Increasing send delay for 127.0.0.1 from 320 to 640 due to max_successful_tryno increase to 10
+Connect Scan Timing: About 31.69% done; ETC: 04:12 (0:01:07 remaining)
+Connect Scan Timing: About 20.85% done; ETC: 04:17 (0:05:45 remaining)
+Connect Scan Timing: About 21.45% done; ETC: 04:15 (0:03:43 remaining)
+Connect Scan Timing: About 31.89% done; ETC: 04:24 (0:12:51 remaining)
+Connect Scan Timing: About 87.14% done; ETC: 04:12 (0:00:38 remaining)
+Connect Scan Timing: About 51.12% done; ETC: 04:19 (0:07:23 remaining)
+Connect Scan Timing: About 40.05% done; ETC: 04:16 (0:04:31 remaining)
+Connect Scan Timing: About 28.50% done; ETC: 04:28 (0:16:28 remaining)
+Connect Scan Timing: About 54.92% done; ETC: 04:14 (0:02:29 remaining)
+Connect Scan Timing: About 23.18% done; ETC: 04:35 (0:23:25 remaining)
+Connect Scan Timing: About 30.85% done; ETC: 04:33 (0:21:07 remaining)
+Connect Scan Timing: About 27.26% done; ETC: 04:29 (0:17:23 remaining)
+Connect Scan Timing: About 47.09% done; ETC: 04:17 (0:05:38 remaining)
+Connect Scan Timing: About 26.62% done; ETC: 04:19 (0:06:56 remaining)
+Connect Scan Timing: About 27.04% done; ETC: 04:36 (0:24:36 remaining)
+Connect Scan Timing: About 65.06% done; ETC: 04:14 (0:02:28 remaining)
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 19 dropped probes since last increase.
+Connect Scan Timing: About 32.49% done; ETC: 04:15 (0:03:09 remaining)
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-29 04:12 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 04:12
+Connect Scan Timing: About 56.63% done; ETC: 04:17 (0:05:16 remaining)
+Scanning localhost (127.0.0.1) [2 ports]
+Completed Ping Scan at 04:12, 1.20s elapsed (1 total hosts)
+Initiating Connect Scan at 04:12
+Warning: 127.0.0.1 giving up on port because retransmission cap hit (10).
+Connect Scan Timing: About 32.99% done; ETC: 04:14 (0:02:04 remaining)
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Increasing send delay for 127.0.0.1 from 640 to 1000 due to 11 out of 20 dropped probes since last increase.
+Connect Scan Timing: About 22.04% done; ETC: 04:19 (0:07:08 remaining)
+Connect Scan Timing: About 46.02% done; ETC: 04:24 (0:12:06 remaining)
+Connect Scan Timing: About 38.70% done; ETC: 04:24 (0:12:04 remaining)
+Connect Scan Timing: About 22.70% done; ETC: 04:17 (0:05:10 remaining)
+Connect Scan Timing: About 57.70% done; ETC: 04:19 (0:07:04 remaining)

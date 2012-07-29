@@ -11,20 +11,100 @@ class NmapWeb extends CI_Controller
 
     protected $commands;
     protected $logs;
+    protected $target;
+    protected $log_file_name;
+    protected $nmap_file_path;
+	public $log_contents;
 
 
     function __construct()
     {
-        $this->logs = ROOTDIR.'/log';
+        $this->setLogs( ROOTDIR.'/log/'.$this->getLogFileName() );
+        $this->setTarget("localhost");
+		$this->nmap_file_path = "/usr/local/bin/nmap";
+        
     }
 
     function index()
     {
-//        echo exec('whoami');
+        // echo exec('whoami');
+        // echo "executing nmap against localhost";
+        // echo $this->logs;
+		$this->runNmap();
+		$this->readLogs();
+        // echo exec('cat '.$this->logs);
+    }
 
-        echo $this->logs;
-        echo exec('/usr/local/bin/nmap -v -A scanme.nmap.org >> '.$this->logs.'/log_file.log 2>&1 &');
+
+	private function findNmap()
+	{
+		
+	}
+
+	private function runNmap()
+	{
+		exec($this->nmap_file_path.' -v -A '.$this->target.' >> '.$this->logs.' 2>&1 &');
+		
+	}
+
+    private function readLogs()
+    {
+		$data = array();
+
+        if ($stream = fopen($this->getLogs(), 'r')) {
+            
+            $data['log_contents'] = stream_get_contents($stream, -1, 0);
+
+            fclose($stream);
+        }
+
+		$this->load->view('display_logs', $data);
 
     }
+
+    public function setCommands($commands)
+    {
+        $this->commands = $commands;
+    }
+
+    public function getCommands()
+    {
+        return $this->commands;
+    }
+
+    public function setLogFileName($log_file_name)
+    {
+        $this->log_file_name = $log_file_name;
+    }
+
+    public function getLogFileName()
+    {
+        if(empty($this->log_file_name))
+        {
+            $this->log_file_name = 'log_file.log';
+        }
+        return $this->log_file_name;
+    }
+
+    public function setLogs($logs)
+    {
+        $this->logs = $logs;
+    }
+
+    public function getLogs()
+    {
+        return $this->logs;
+    }
+
+    public function setTarget($target)
+    {
+        $this->target = $target;
+    }
+
+    public function getTarget()
+    {
+        return $this->target;
+    }
+
 
 }
