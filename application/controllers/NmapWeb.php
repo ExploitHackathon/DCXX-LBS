@@ -145,20 +145,14 @@ class NmapWeb extends CI_Controller
                 $this->setCommands('-sS -sU -T4 -A -v -PE -PP -PS80,443 -PA3389 -PU40125 -PY -g 53');
                 break;
 		}
-        
-        // $databaseName = $this->GetDatabaseName();
 
-		
-        
-		//         foreach ($this->post as $key => $var)
-		//         {
-		// 	echo $key ." ... " .$var. "... ";
-		// }
-		
+		// clears the log file of the old junk
 		file_put_contents($this->getLogs(), "");
-		
+
+        // runs the new command
 		$this->runNmap();
-		
+
+        // go display the log file when its ready
 		redirect('/nmapweb/logs/', 'refresh');
 	}
 
@@ -175,13 +169,12 @@ class NmapWeb extends CI_Controller
 		exec($this->cmd);
 	}
 	
-	private function createLogFile()
-	{
-		exec($this->nmap_file_path.' -v -A '.$this->target.' >> '.$this->logs.' 2>&1 &');
-	}
+
 
     /**
      * displays the log file
+     *
+     * @todo make ajaxy
      */
     public function logs()
     {
@@ -190,9 +183,6 @@ class NmapWeb extends CI_Controller
 //		$data['cmd'] = "cmd ". $this->cmd;
 		
 		$data['log_contents'] = file_get_contents($this->getLogs());
-		
-		// file_put_contents($this->getLogs(), "");
-		
 
 		$this->load->view('display_logs', $data);
 
