@@ -70,10 +70,6 @@ class NmapWeb extends CI_Controller
 		$data['form'] = $html;
 		
 		$this->load->view('nmapForm', $data);
-	
-
-		// $this->runNmap();
-		// $this->readLogs();
 		
 		
     }
@@ -96,10 +92,13 @@ class NmapWeb extends CI_Controller
 
 		
         
-        foreach ($this->post as $key => $var)
-        {
-			echo $key ." ... " .$var. "... ";
-		}
+		//         foreach ($this->post as $key => $var)
+		//         {
+		// 	echo $key ." ... " .$var. "... ";
+		// }
+		
+		$this->runNmap();
+		$this->readLogs();
 	}
 
 
@@ -110,7 +109,7 @@ class NmapWeb extends CI_Controller
 
 	private function runNmap()
 	{
-		exec($this->nmap_file_path.' -T4 -F '.$this->target.' >> '.$this->logs.' 2>&1 &');
+		exec($this->nmap_file_path.' '. $this->getCommands().' '.$this->target.' >> '.$this->logs.' 2>&1 &');
 	}
 	
 	private function createLogFile()
@@ -139,6 +138,10 @@ class NmapWeb extends CI_Controller
 
     public function getCommands()
     {
+		if(empty($this->commands))
+		{
+			$this->commands = '-T4 -F';
+		}
         return $this->commands;
     }
 
