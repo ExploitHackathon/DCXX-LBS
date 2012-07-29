@@ -8,7 +8,7 @@
 <h2>Display Logs</h2>
 
 <div>
-	<?php echo $cmd; ?>
+
 </div>
 
 <a href="/nmapweb/logs">

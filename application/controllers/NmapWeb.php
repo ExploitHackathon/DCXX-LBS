@@ -164,7 +164,7 @@ class NmapWeb extends CI_Controller
 	{
         $this->cmd = $this->nmap_file_path.' '. $this->getCommands().' '.$this->target.' >> '.$this->logs.' 2>&1 &';
 
-        echo $this->cmd;
+//        echo $this->cmd;
         
 		exec($this->cmd);
 	}
