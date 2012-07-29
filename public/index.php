@@ -72,9 +72,10 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
+//$app = realdir(__DIR__);
+//var_dump($app);
 
-
-	$application_folder = 'application';
+	$application_folder = realdir('../application');
 
 /*
  * --------------------------------------------------------------------
