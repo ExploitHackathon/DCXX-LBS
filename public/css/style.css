@@ -270,7 +270,7 @@ td { vertical-align: top; }
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
 
-
+.clear{ clear: both; }
 
 /* ==|== print styles =======================================================
    Print styles.
@@ -291,3 +291,17 @@ td { vertical-align: top; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
+
+
+
+.refresh
+{
+	padding: 20px;
+	background: gray;
+	width: 15%;
+	text-align: center;
+	text-decoration: none;
+	margin-left: 20px;
+	float: left;
+}
+

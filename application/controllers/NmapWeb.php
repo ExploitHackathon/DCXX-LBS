@@ -18,7 +18,9 @@ class NmapWeb extends CI_Controller
     protected $target;
     protected $log_file_name;
     protected $nmap_file_path;
+	protected $cmd;
 	public $log_contents;
+	
 
 
     function __construct()
@@ -76,6 +78,8 @@ class NmapWeb extends CI_Controller
 
 	public function run()
 	{
+		$this->load->helper('url');
+		
 		$scans = Request::post('scans');
 		
 		switch($scans)
@@ -83,28 +87,28 @@ class NmapWeb extends CI_Controller
 			case "iscan":
 				$this->setCommands('-T4 -A -v');
 				break;
-			case "udp"
+            case "udp":
 				$this->setCommands('-sS -sU -T4 -A -v');
 				break;
             case "tcp":
                 $this->setCommands('-p 1-65535 T4 -A -v');
                 break;
-            case "noping"
+            case "noping":
                 $this->setCommands('-T4 -A -v -Pn');
                 break;
             case "ping":
                 $this->setCommands('-sn');
                 break;
-            case "quick"
+            case "quick":
                 $this->setCommands('-T4 -F');
                 break;
             case "quickplus":
                 $this->setCommands('-sV -T4 -O -F --version-light');
                 break;
-            case "traceroute"
+            case "traceroute":
                 $this->setCommands('-sn --traceroute');
                 break;
-            case "slow"
+            case "slow":
                 $this->setCommands('-sS -sU -T4 -A -v -PE -PP -PS80,443 -PA3389 -PU40125 -PY -g 53');
                 break;
 		}
@@ -118,8 +122,11 @@ class NmapWeb extends CI_Controller
 		// 	echo $key ." ... " .$var. "... ";
 		// }
 		
+		file_put_contents($this->getLogs(), "");
+		
 		$this->runNmap();
-		$this->readLogs();
+		
+		redirect('/nmapweb/logs/', 'refresh');
 	}
 
 
@@ -130,7 +137,9 @@ class NmapWeb extends CI_Controller
 
 	private function runNmap()
 	{
-		exec($this->nmap_file_path.' '. $this->getCommands().' '.$this->target.' >> '.$this->logs.' 2>&1 &');
+        $this->cmd = $this->nmap_file_path.' '. $this->getCommands().' '.$this->target.' >> '.$this->logs.' 2>&1 &';
+        
+		exec($this->cmd);
 	}
 	
 	private function createLogFile()
@@ -138,14 +147,15 @@ class NmapWeb extends CI_Controller
 		exec($this->nmap_file_path.' -v -A '.$this->target.' >> '.$this->logs.' 2>&1 &');
 	}
 
-    private function readLogs()
+    public function logs()
     {
 		$data = array();
 		
+		$data['cmd'] = $this->cmd;
 		
 		$data['log_contents'] = file_get_contents($this->getLogs());
 		
-		file_put_contents($this->getLogs(), "");
+		// file_put_contents($this->getLogs(), "");
 		
 
 		$this->load->view('display_logs', $data);
