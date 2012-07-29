@@ -46,6 +46,9 @@ if (defined('ENVIRONMENT'))
 	}
 }
 
+define('ROOTDIR', dirname(dirname(__FILE__)));
+
+
 /*
  *---------------------------------------------------------------
  * SYSTEM FOLDER NAME

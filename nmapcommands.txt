@@ -1,1 +1,4 @@
 nmap -p 1-65535 T4 -A -v localhost
+
+nmap -v -A scanme.nmap.org
+

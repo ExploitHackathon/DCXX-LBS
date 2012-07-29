@@ -1,0 +1,49 @@
+
+Starting Nmap 6.01 ( http://nmap.org ) at 2012-07-28 21:53 CDT
+NSE: Loaded 93 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating Ping Scan at 21:53
+Scanning scanme.nmap.org (74.207.244.221) [2 ports]
+Completed Ping Scan at 21:53, 0.34s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 21:53
+Completed Parallel DNS resolution of 1 host. at 21:53, 0.11s elapsed
+Initiating Connect Scan at 21:53
+Scanning scanme.nmap.org (74.207.244.221) [1000 ports]
+Discovered open port 53/tcp on 74.207.244.221
+Discovered open port 80/tcp on 74.207.244.221
+Discovered open port 22/tcp on 74.207.244.221
+Discovered open port 9929/tcp on 74.207.244.221
+Increasing send delay for 74.207.244.221 from 0 to 5 due to max_successful_tryno increase to 4
+Completed Connect Scan at 21:54, 52.20s elapsed (1000 total ports)
+Initiating Service scan at 21:54
+Scanning 4 services on scanme.nmap.org (74.207.244.221)
+Completed Service scan at 21:54, 6.22s elapsed (4 services on 1 host)
+NSE: Script scanning 74.207.244.221.
+Initiating NSE at 21:54
+Completed NSE at 21:54, 4.48s elapsed
+Nmap scan report for scanme.nmap.org (74.207.244.221)
+Host is up (0.17s latency).
+Not shown: 993 closed ports
+PORT     STATE    SERVICE    VERSION
+22/tcp   open     ssh        OpenSSH 5.3p1 Debian 3ubuntu7 (protocol 2.0)
+| ssh-hostkey: 1024 8d:60:f1:7c:ca:b7:3d:0a:d6:67:54:9d:69:d9:b9:dd (DSA)
+|_2048 79:f8:09:ac:d4:e2:32:42:10:49:d3:bd:20:82:85:ec (RSA)
+53/tcp   open     domain     ISC BIND Up oh.
+| dns-nsid: 
+|_  bind.version: Up oh.
+80/tcp   open     http       Apache httpd 2.2.14 ((Ubuntu))
+|_http-methods: GET HEAD POST OPTIONS
+|_http-title: Go ahead and ScanMe!
+|_http-favicon: Unknown favicon MD5: 156515DA3C0F7DC6B2493BD5CE43F795
+1433/tcp filtered ms-sql-s
+1434/tcp filtered ms-sql-m
+8181/tcp filtered unknown
+9929/tcp open     nping-echo Nping echo
+Service Info: OS: Linux; CPE: cpe:/o:linux:kernel
+
+NSE: Script Post-scanning.
+Initiating NSE at 21:54
+Completed NSE at 21:54, 0.00s elapsed
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 64.31 seconds
