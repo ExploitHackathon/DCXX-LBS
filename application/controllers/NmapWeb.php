@@ -28,15 +28,12 @@ class NmapWeb extends CI_Controller
 
     function index()
     {
-		// echo "shit";
-		// $this->load->view('test');
-		
-        // echo exec('whoami');
-        // echo "executing nmap against localhost";
-        // echo $this->logs;
+	
+
 		$this->runNmap();
-		$this->readLogs();
-        // echo exec('cat '.$this->logs);
+		// $this->readLogs();
+		
+		
     }
 
 
@@ -47,8 +44,20 @@ class NmapWeb extends CI_Controller
 
 	private function runNmap()
 	{
-		exec($this->nmap_file_path.' -v -A '.$this->target.' >> '.$this->logs.' 2>&1 &');
+		ob_start();
+
+		exec($this->nmap_file_path.' -v -A '.$this->target);
+
+		$data['log_contents'] = ob_get_contents();
 		
+		ob_end_clean();
+		
+		$this->load->view('display_logs', $data);
+	}
+	
+	private function createLogFile()
+	{
+		exec($this->nmap_file_path.' -v -A '.$this->target.' >> '.$this->logs.' 2>&1 &');
 	}
 
     private function readLogs()
